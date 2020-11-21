@@ -16,3 +16,7 @@ steps:
       script: |
         echo $(Build.SourceVersionMessage)
         git branch -r 
+        git checkout origin/a
+        git merge master
+        git commit -a
+        git push
