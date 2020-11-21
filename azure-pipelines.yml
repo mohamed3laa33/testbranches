@@ -15,4 +15,4 @@ steps:
       targetType: 'inline'
       script: |
         echo $(Build.SourceVersionMessage)
-        git branch -a
+        git fetch --all
