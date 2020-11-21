@@ -17,12 +17,11 @@ steps:
         git config --global user.email "mohamedalaa1@outlook.com"
         git config --global user.name "Mohamed Alaa"
         Branches=$(git branch -r | cut -d '/' -f 2)
-        git log --format="%H" -n 1
-        # for Branch in $Branches
-        # do
-        # #  git checkout $Branch
-        # #  git merge origin/main
-        # #  git commit -a
-        # #  git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:$Branch
-        # #done
+        latestCommit=$(git log --format="%H" -n 1)
+        for Branch in $Branches
+        do
+          git checkout $Branch
+          git cherry-pick  $latestCommit
+          git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:$Branch
+        #done
 
