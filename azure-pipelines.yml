@@ -21,7 +21,7 @@ steps:
         for Branch in $Branches
         do
           git checkout $Branch
-          git cherry-pick  $latestCommit -strategy-option theirs
+          git cherry-pick  $latestCommit --strategy-option theirs
           git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:$Branch
         done
 
