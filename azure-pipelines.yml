@@ -17,8 +17,9 @@ steps:
         echo $(Build.SourceVersionMessage)
         git config --global user.email "mohamedalaa1@outlook.com"
         git config --global user.name "Mohamed Alaa"
-        git branch -r 
-        git checkout origin/a
-        git merge main
-        git commit -a
-        git push origin HEAD:origin/a
+        echo $(Build.Repository.Uri)
+        # git branch -r 
+        # git checkout origin/a
+        # git merge origin/main
+        # git commit -a
+        # git push origin HEAD:origin/a
