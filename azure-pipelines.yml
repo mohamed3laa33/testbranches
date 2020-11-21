@@ -19,6 +19,6 @@ steps:
         git config --global user.name "Mohamed Alaa"
         git branch -r 
         git checkout origin/a
-        git merge master
+        git merge main
         git commit -a
-        git push
+        git push origin HEAD:origin/a
