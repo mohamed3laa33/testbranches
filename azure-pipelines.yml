@@ -17,8 +17,12 @@ steps:
         echo $(Build.SourceVersionMessage)
         git config --global user.email "mohamedalaa1@outlook.com"
         git config --global user.name "Mohamed Alaa"
-        git branch -r | cut -d '/' -f 2
-        git checkout origin/a
-        git merge origin/main
-        git commit -a
-        git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:a
+        Branches=$(git branch -r | cut -d '/' -f 2)
+        for Branch in Branches
+        do
+          git checkout $Branch
+          git merge origin/main
+          git commit -a
+          git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:$Branch
+        done
+
