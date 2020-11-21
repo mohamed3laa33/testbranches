@@ -31,5 +31,11 @@ steps:
         # Write your commands here
         
         echo 'Hello world'
-
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Write your commands here
+        
+        echo 'Hello world replicate'
 
