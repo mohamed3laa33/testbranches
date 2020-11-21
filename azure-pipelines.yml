@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 steps:
   - task: Bash@3
-    condition: and(contains(variables['Build.SourceVersionMessage'], 'replicate'), succeeded())
+    # condition: and(contains(variables['Build.SourceVersionMessage'], 'replicate'), succeeded())
     inputs:
       targetType: 'inline'
       script: |
