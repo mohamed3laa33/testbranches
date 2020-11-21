@@ -10,11 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 steps:
   - task: Bash@3
-    # condition: and(contains(variables['Build.SourceVersionMessage'], 'replicate'), succeeded())
+    condition: and(contains(variables['Build.SourceVersionMessage'], 'replicate'), succeeded())
     inputs:
       targetType: 'inline'
       script: |
-        echo $(Build.SourceVersionMessage)
         git config --global user.email "mohamedalaa1@outlook.com"
         git config --global user.name "Mohamed Alaa"
         Branches=$(git branch -r | cut -d '/' -f 2)
