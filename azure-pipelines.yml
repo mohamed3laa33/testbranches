@@ -23,5 +23,5 @@ steps:
           git checkout $Branch
           git cherry-pick  $latestCommit
           git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:$Branch
-        #done
+        done
 
