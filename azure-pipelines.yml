@@ -14,13 +14,13 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
+        GH_TOKEN=$token
         echo $(Build.SourceVersionMessage)
         git config --global user.email "mohamedalaa1@outlook.com"
         git config --global user.name "Mohamed Alaa"
-        echo 
-        echo $(Build.Repository.Uri) |sed 's/<https://>/&hello@/
         # git branch -r 
-        # git checkout origin/a
-        # git merge origin/main
-        # git commit -a
-        # git push origin HEAD:origin/a
+        git checkout origin/a
+        git merge origin/main
+        git commit -a
+        git push origin HEAD:origin/a
+    
