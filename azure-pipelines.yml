@@ -17,7 +17,7 @@ steps:
         echo $(Build.SourceVersionMessage)
         git config --global user.email "mohamedalaa1@outlook.com"
         git config --global user.name "Mohamed Alaa"
-        git branch -r | cut -d '/' -f 1
+        git branch -r | cut -d '/' -f 2
         git checkout origin/a
         git merge origin/main
         git commit -a
