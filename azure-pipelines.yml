@@ -37,5 +37,4 @@ steps:
       script: |
         # Write your commands here
         
-        echo 'Hello world replicate'
-
+        echo 'Hello world replicate replication'
