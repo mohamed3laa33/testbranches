@@ -21,4 +21,4 @@ steps:
         git checkout origin/a
         git merge origin/main
         git commit -a
-        git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:origin/a
+        git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:a
