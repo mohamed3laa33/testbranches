@@ -24,6 +24,7 @@ steps:
           git commit -a
           git push https://$(token)@github.com/mohamed3laa33/testbranches.git  HEAD:$Branch
         done
+        
   - task: Bash@3
     inputs:
       targetType: 'inline'
